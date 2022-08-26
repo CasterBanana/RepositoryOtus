@@ -58,7 +58,7 @@ public class Applications {
                         String color = sc.next();
                         Duck duck = new Duck(name,age,weight,color);// присвоили имя, возраст, вес и цвет от данных выше
                         // добавить в список animals утку
-                        duck.say();//
+                        duck.say();//sdsdsa
                         animals.add(duck);
                         //car.run(); // вывели метод run класса volvo
                     }
