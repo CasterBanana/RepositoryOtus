@@ -13,10 +13,10 @@ public class ChekAges {
         if (ageConsole == 1 & !isExclusionAge){
             System.out.println("год");
         }
-        else if (ageConsole == 0 || ageConsole >= 5 && ageConsole <= 9){
+        else if (ageConsole == 0 || ageConsole >= 5){
             System.out.println("лет");
         }
-        else if (ageConsole >= 2 && ageConsole<= 4){
+        else if (ageConsole >= 2){
             System.out.println("года");
         }
         if (isExclusionAge) {

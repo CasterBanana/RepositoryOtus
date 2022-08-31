@@ -1,4 +1,4 @@
-package homeAnimal;
+package homeanimal;
 
 public class Duck extends Animal implements Flying{
     public Duck(String name, int age, int weight, String color) {

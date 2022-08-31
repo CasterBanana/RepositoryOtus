@@ -1,4 +1,4 @@
-package homeAnimal;
+package homeanimal;
 
 public class Dog extends Animal{
     public Dog(String name, int age, int weight, String color) {

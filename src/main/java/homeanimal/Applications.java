@@ -1,4 +1,4 @@
-package homeAnimal;
+package homeanimal;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -77,8 +77,8 @@ public class Applications {
                         System.out.println("wrong command");
                 }
             } catch (IllegalArgumentException ex){
-                System.out.println("Введена неверная комманда, завершение работы");
-                System.exit(400);
+                System.out.println("Введена неверная комманда");
+                //System.exit(400);
 
             }
         }

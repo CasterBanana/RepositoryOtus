@@ -1,4 +1,4 @@
-package homeAnimal;
+package homeanimal;
 
 public abstract class Animal {
     protected String  name;
