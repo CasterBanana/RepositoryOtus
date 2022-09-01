@@ -18,50 +18,26 @@ public class Applications {
 
                 switch (userChoise) {
                     case ADD:
-                        System.out.println("Какое животное вы хотите добавить? cat/dog/duck");
+                        System.out.println("Какое животное вы хотите добавить? cat/dog/duck");// попробовать завернуть в цикл while для того, чтобы определять cat/dog/duck
                         String animalType = sc.next().toLowerCase();
                         if (animalType.equals("cat")) {
-                            System.out.println("Введите имя");//
-                            String name = sc.next(); // считали имя
-                            System.out.println("Введите возраст");
-                            int age = sc.nextInt(); // считали возраст
-                            System.out.println("Введите вес");
-                            int weight = sc.nextInt(); // считали вес
-                            System.out.println("Введите цвет");
-                            String color = sc.next(); // считали цвет
-                            Cat cat = new Cat(name, age, weight, color);// присвоили имя, возраст, вес и цвет от данных выше
+                            Cat cat = new Cat();// присвоили имя, возраст, вес и цвет от данных выше
+                            fillAnimal(sc,cat);
                             //добавить в список animals кота
                             cat.say();
                             animals.add(cat);
-                            //car.run(); // вывели метод run класса volvo
                         } else if (animalType.equals("dog")) {
-                            System.out.println("Введите имя");//
-                            String name = sc.next();
-                            System.out.println("Введите возраст");
-                            int age = sc.nextInt(); // считали сумму
-                            System.out.println("Введите вес");
-                            int weight = sc.nextInt();
-                            System.out.println("Введите цвет");
-                            String color = sc.next();
-                            Dog dog = new Dog(name, age, weight, color);// присвоили имя, возраст, вес и цвет от данных выше
+                            Dog dog = new Dog();// присвоили имя, возраст, вес и цвет от данных выше
+                            fillAnimal(sc,dog);
                             // добавить в список animals собаку
                             dog.say();
                             animals.add(dog);
-                            //car.run(); // вывели метод run класса volvo
                         } else if (animalType.equals("duck")) {
-                            System.out.println("Введите имя");//
-                            String name = sc.next();
-                            System.out.println("Введите возраст");
-                            int age = sc.nextInt(); // считали сумму
-                            System.out.println("Введите вес");
-                            int weight = sc.nextInt();
-                            System.out.println("Введите цвет");
-                            String color = sc.next();
-                            Duck duck = new Duck(name, age, weight, color);// присвоили имя, возраст, вес и цвет от данных выше
+                            Duck duck = new Duck();// присвоили имя, возраст, вес и цвет от данных выше
+                            fillAnimal(sc,duck);
                             // добавить в список animals утку
-                            duck.say();//sdsdsa
+                            duck.say();
                             animals.add(duck);
-                            //car.run(); // вывели метод run класса volvo
                         }
                         break;
                     case LIST:
@@ -79,22 +55,41 @@ public class Applications {
             } catch (IllegalArgumentException ex){
                 System.out.println("Введена неверная комманда");
                 //System.exit(400);
-
             }
         }
+        }
+
+        private static void fillAnimal(Scanner console, Animal animal){
+            System.out.println("Введите имя");//
+            String name = console.next(); // считали имя
+            System.out.println("Введите возраст");
+            int age = getUserprint(console);
+            //int age = console.nextInt(); // считали возраст
+            System.out.println("Введите вес");
+            int weight = getUserprint(console);
+            //int weight = console.nextInt(); // считали вес
+            System.out.println("Введите цвет");
+            String color = console.next(); // считали цвет
+            animal.setName(name);
+            animal.setAge(age);
+            animal.setWeight(weight);
+            animal.setColor(color);
+        }
+
+        private static int getUserprint(Scanner console){
+            int number;
+            do {
+                while (!console.hasNextInt()) {
+                    System.out.println("Вы ввели не число, введите число");
+                    console.next();
+                }
+                number = console.nextInt();
+            } while (number <= 0);
+            System.out.println("Значение не может быть меньше 1, введите снова ");
+            return number;
 
         }
 
-
-
-
-
-//        Animal dog = new Animal();
-//        dog.setName("Барбас");
-//        dog.setWeight(100);
-//        dog.setAge(15);
-//        dog.setColor("белый");
-//        System.out.println(dog); // что-то работает
 
 
     }

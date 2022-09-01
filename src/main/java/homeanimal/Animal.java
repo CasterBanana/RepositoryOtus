@@ -31,6 +31,10 @@ public abstract class Animal {
         this.weight = weight;
         this.color = color;
     }
+    public Animal(){
+
+    }
+
 
     //метод по выводу год года лет
     public String checkAges(){//разобраться с параметром, а лучше спросить совет как правильнее и откуда его передавать в метод
@@ -42,11 +46,11 @@ public abstract class Animal {
             result = "год";
             //System.out.println("год");
         }
-        else if (ageConsole == 0 || ageConsole >= 5 && ageConsole <= 9){
+        else if (ageConsole == 0 || ageConsole >= 5){
             result = "лет";
             //System.out.println("лет");
         }
-        else if (ageConsole >= 2 && ageConsole<= 4){
+        else if (ageConsole >= 2){
             result = "года";
             //System.out.println("года");
         }
@@ -102,16 +106,8 @@ public abstract class Animal {
                 ", я вешу " + weight + " кг " +
                 ", мой цвет - " + color;
     }
+
+
+
 }
 
-/*
-@Override
-    public String toString() {
-        return "Animal{" +
-                "Привет! меня зовут" + name + '\'' +
-                ", мне " + age +
-                ", я вешу " + weight +
-                ", мой цвет'" + color + '\'' +
-                '}';
-    }
- */

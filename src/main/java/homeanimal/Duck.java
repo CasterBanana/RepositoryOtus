@@ -5,6 +5,10 @@ public class Duck extends Animal implements Flying{
         super(name, age, weight, color);
     }
 
+    public Duck(){
+
+    }
+
     @Override
     public void say() {
         System.out.println("Кря");

@@ -5,6 +5,10 @@ public class Cat extends Animal { // если у родительского кл
         super(name, age, weight, color); // super означает, что мы передаём что-то в конструктор родительского класса Animal
     }
 
+    public Cat(){
+
+    }
+
     @Override //ctrl + 0 и там можно вытянуть метод из класса Animal
     public void say() { // а тут мы старый кот стёрли и ввели свой, переопределили типа
         System.out.println("Мяу");
